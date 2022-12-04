@@ -5,7 +5,7 @@ on: [push] # When this action runs.
 jobs:
   build:
 
-    runs-on: ubuntu-latest # Which OS this runs on, you can also build on Windows or MacOS.
+    runs-on: ubuntu-latest # Which OS this runs on, you can also build on Windows or macOS.
     strategy:
       matrix:
         python-version: [3.8.*] # You can build against multiple Python versions.
