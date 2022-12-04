@@ -15,7 +15,7 @@ jobs:
     - name: Set up Python ${{ matrix.python-version }} # Name of an action that sets up Python.
       uses: actions/setup-python@v2 # A pre-built GitHub Action that sets up a Python environment.
       with:
-        python-version: [3.8]
+        python-version: 3.8
     - name: Install dependencies # The first step that isn't just calling another action.
       run: |
         python -m pip install --upgrade pip # Upgrade pip to the latest version.
