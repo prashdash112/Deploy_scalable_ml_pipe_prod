@@ -2,10 +2,10 @@ import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
-from ml.model import *
-from ml.data import process_data
+from model import *
+from data import process_data
 
-data = pd.read_csv('../data/census.csv')
+data = pd.read_csv('.../data/census.csv')
 data = data.drop_duplicates()
 
 train, test = train_test_split(data, test_size=0.20)
