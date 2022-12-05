@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
-from ml.model import * #train_model,inference,compute_model_metrics 
+from ml.model import *
 from ml.data import process_data
 
 data = pd.read_csv('../data/census.csv')
@@ -66,7 +66,6 @@ def test_train_model():
     'verbose': 0,
     'warm_start': False}
     assert type(model) == RandomForestClassifier
-    
 
 def test_inference():
     '''
