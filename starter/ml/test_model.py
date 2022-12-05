@@ -2,10 +2,11 @@ import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
-from model import *
 from data import process_data
+from model import *
 
-data = pd.read_csv('.../data/census.csv')
+
+data = pd.read_csv('./data/census.csv')
 data = data.drop_duplicates()
 
 train, test = train_test_split(data, test_size=0.20)
@@ -82,7 +83,7 @@ def test_compute_model_metrics():
     '''
     
     Function to test the compute_model_metrics function in model.py file
-
+    
     '''
     model = train_model(X_train, y_train)
     preds = inference(model, X_test)
@@ -92,7 +93,7 @@ def test_compute_model_metrics():
     for metric in metrics:
         assert metric >=0 and metric <= 1 #to ensure all metrics values are between 0 and 1
 
-if __name__ == "__main__":
+if __name__ =="__main__":
     test_train_model()
     test_inference()
     test_compute_model_metrics()
