@@ -48,6 +48,6 @@ X_test, y_test, _, _ = process_data(
 
 # Train and save a model.
 model = train_model(X_train,y_train)
-pd.to_pickle(model, os.path.join(path, "model.pkl"))
-pd.to_pickle(model, os.path.join(path, "encoder.pkl"))
-pd.to_pickle(model, os.path.join(path, "lb.pkl"))
+pd.to_pickle(model, os.path.join(path, "model.pkl"), protocol=4)
+pd.to_pickle(model, os.path.join(path, "encoder.pkl"), protocol=4)
+pd.to_pickle(model, os.path.join(path, "lb.pkl"), protocol=4)
