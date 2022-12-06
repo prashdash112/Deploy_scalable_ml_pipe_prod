@@ -14,7 +14,7 @@ app = FastAPI()
 
 # pydantic models
 class Data_Input(BaseModel):
-    age : int = 34
+    age : int = 48
     workclass : str =  "State-gov"
     fnlgt : int = 77516
     education : str = "Divorced"
@@ -24,7 +24,7 @@ class Data_Input(BaseModel):
     relationship : str = "Not-in-family"
     race : str = "White"
     sex : str = "Male"
-    capital_gain : int = 18084
+    capital_gain : int = 11784
     capital_loss : int = 0
     hours_per_week : int = 40
     native_country : str = "United-States"
