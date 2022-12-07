@@ -30,7 +30,7 @@ inputdata = {'age': 29,
 
 response = requests.post(
 
-url='https://ml-dev-ops-salary-app.herokuapp.com/predict',
+url='https://scalable-ml-pipe-prod.herokuapp.com/predict',
 
 json=inputdata)
 
