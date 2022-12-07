@@ -26,6 +26,7 @@ jobs:
         pip install scikit-learn==1.1.3
         pip install requests
         pip install fastapi==0.88.0
+        pip install httpx
         pip install uvicorn==0.20.0
         pip install gunicorn
 
