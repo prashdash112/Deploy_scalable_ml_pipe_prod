@@ -60,4 +60,4 @@ def test_post_greater_then():
                     }
     response = client.post("/predict", json=input_dict)
     assert response.status_code == 200
-    assert json.loads(response.text)["prediction"] == "Salary => 50k"
+    assert json.loads(response.text)["prediction"] == "Salary <= 50k"
