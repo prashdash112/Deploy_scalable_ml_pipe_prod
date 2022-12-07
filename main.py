@@ -11,7 +11,6 @@ from starter.ml.data import process_data
 
 #Initial a FastAPI instance
 app = FastAPI()
-server = app.server
 
 # pydantic models
 class Data_Input(BaseModel):
