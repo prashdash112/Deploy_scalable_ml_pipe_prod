@@ -2,8 +2,8 @@ import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
-from data import process_data
-from model import *
+from starter.ml.data import process_data
+from starter.ml.model import *
 
 
 data = pd.read_csv('./data/census.csv')
@@ -53,7 +53,7 @@ def test_train_model():
     'class_weight': None,
     'criterion': 'gini',
     'max_depth': 5,
-    'max_features': 'sqrt',
+    'max_features': 'auto',
     'max_leaf_nodes': None,
     'max_samples': None,
     'min_impurity_decrease': 0.0,
@@ -93,7 +93,7 @@ def test_compute_model_metrics():
     for metric in metrics:
         assert metric >=0 and metric <= 1 #to ensure all metrics values are between 0 and 1
 
-if __name__ =="__main__":
-    test_train_model()
-    test_inference()
-    test_compute_model_metrics()
+#if __name__ =="__main__":
+test_train_model()
+test_inference()
+test_compute_model_metrics()
