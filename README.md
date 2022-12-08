@@ -41,6 +41,6 @@ Deployed the Rest API to a cloud service provider: heroku. At this stage, the mo
 
 ### Querying the live API
 A user can query the API using the request_post.py file. User needs to run the command:
-'''
+```
 python request_post.py
-'''
+```
