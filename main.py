@@ -33,6 +33,9 @@ class Data_Output(BaseModel):
     #Prediction will be either >=50K or <=50K 
     prediction: str 
 
+# Loading the models
+model = pd.read_pickle(r"model.pkl")
+encoder = pd.read_pickle(r"encoder.pkl")
 
 #The Welcome page
 @app.get("/")
@@ -88,10 +91,15 @@ def get_prediction(df_temp: Data_Input):
     "sex",
     "native-country",
 ] 
-    model = pd.read_pickle(r"model.pkl")
-    encoder = pd.read_pickle(r"encoder.pkl") 
 
-    X_processed, _, _, _ = process_data(df, categorical_features=cat_features, label = None, training=False, encoder=encoder)
+    X_processed, _, _, _ = process_data(
+        df, 
+        categorical_features=cat_features, 
+        label = None, 
+        training=False, 
+        encoder=encoder
+        )
+        
     prediction = inference(model, X_processed)
     
     if prediction == 0:
